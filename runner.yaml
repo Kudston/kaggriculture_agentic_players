@@ -1,0 +1,40 @@
+backend_url: https://cds-translations-somewhat-comply.trycloudflare.com
+request_timeout_seconds: 120
+
+mcp_server:
+  type: streamable_http
+  # The shared FastMCP Kaggriculture server from kaggriculture_simulation_engine.
+  url: https://courtesy-for-actual-approx.trycloudflare.com/mcp
+
+llm:
+  provider: openai
+  max_concurrent_requests: 2
+  max_context_tokens: 60000  # fallback only when /v1/models has no context metadata
+  handoff_at: 0.5
+  retry_attempts: 3
+
+players:
+  "0":
+    prompt_file: player_prompt.md
+    model: unsloth/Qwen3.8-27B-GGUF
+    base_url: https://strong-ensures-ranging-yours.trycloudflare.com/v1
+    api_key: ""
+    conversation_mode: new_agent_at_threshold
+    temperature: 0.2
+    max_output_tokens: 1024
+  "1":
+    prompt_file: player_prompt.md
+    model: unsloth/Qwen3.8-27B-GGUF
+    base_url: https://strong-ensures-ranging-yours.trycloudflare.com/v1
+    api_key: ""
+    conversation_mode: new_agent_at_threshold
+    temperature: 0.2
+    max_output_tokens: 1024
+
+monitoring:
+  health_check_seconds: 180
+  max_respawns: 3
+
+episode:
+  episode_steps: 20
+  turns_per_day: 24

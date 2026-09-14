@@ -1,0 +1,19 @@
+# Runtime player logs
+player_*.log
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Python packaging artifacts
+*.egg
+*.egg-info/
+build/
+dist/
+
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+mcp_agent.secrets.yaml
+runner.local.yaml

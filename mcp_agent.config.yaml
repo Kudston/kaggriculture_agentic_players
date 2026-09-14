@@ -1,0 +1,11 @@
+execution_engine: asyncio
+
+mcp:
+  servers:
+    kaggriculture:
+      transport: streamable_http
+      url: https://courtesy-for-actual-approx.trycloudflare.com/mcp
+
+openai:
+  # Player-specific OpenAI settings are supplied programmatically from runner.yaml.
+  reasoning_effort: none

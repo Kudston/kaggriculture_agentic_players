@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaggriculture-agentic-player"
+version = "0.1.0"
+description = "Two-player Kaggriculture runner built with mcp-agent"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp-agent[openai]>=0.0.21",
+    "httpx>=0.27,<1",
+    "websockets>=12,<16",
+    "PyYAML>=6.0,<7",
+    "tiktoken>=0.7,<1",
+]
+
+[project.scripts]
+kaggriculture-player = "agentic_player_controller:main_cli"
+
+[tool.setuptools]
+py-modules = ["agentic_player_controller"]
